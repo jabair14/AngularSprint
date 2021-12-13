@@ -1,20 +1,48 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="app.component.css" />
+<html>
+  <body class="is-preload">
+    <div id="wrapper">
 <div style="text-align:center">
   <h1>
     Breaking Bad Character Cards
   </h1>
   <button class="button primary" (click)="getData()">Fetch Data</button>
     <div *ngFor="let person of data " style="text-align:center">
-      <div>
-        {{  person.name}}<br>
-        {{  person.birthday}}<br>
-        {{ person.nickname }}<br>
-        {{ person.occupation}}<br>
-        {{ person.status}}<br>
-        In Seasons : {{ person.appearance}}<br>
-        {{ person.portrayed}}<br>
-        {{ person.category}} <br>
-        {{ person.better_call_saul_apperance}}<br>
-        <img src={{person.img}} width="200" height="200" alt="">
+      <div id="main">
+      <div class="inner">
+        <section class="tiles">
+          <article class="style1">
+            <span class="image">
+              <img src={{person.img}}  width="326" height="353" alt="">
+            </span>
+            <a href="google.com">
+              <h2>{{person.name}}</h2>
+              <div class="content">
+                <p>
+                {{  person.birthday}}<br>
+                {{ person.nickname }}<br>
+                {{ person.occupation}}<br>
+                {{ person.status}}<br>
+                In Seasons : {{ person.appearance}}<br>
+                {{ person.portrayed}}<br>
+                {{ person.category}} <br>
+                {{ person.better_call_saul_apperance}}<br>
+                </p>
+              </div>
+            </a>
+            </article>
+        </section>
+       </div>
        </div>
       </div>
  </div>
+ </div>
+  </body>
+ <script src="assets/js/jquery.min.js"></script>
+ <script src="assets/js/browser.min.js"></script>
+ <script src="assets/js/breakpoints.min.js"></script>
+ <script src="assets/js/util.js"></script>
+ <script src="assets/js/main.js"></script>
+ </html>
