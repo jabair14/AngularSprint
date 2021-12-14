@@ -3,42 +3,43 @@
 <link rel="stylesheet" href="app.component.css" />
 <html>
   <body class="is-preload">
+
+    <div style="text-align:center">
+    <h1>
+      Breaking Bad Character Cards
+    </h1>
+    <button class="button primary" (click)="getData()">Fetch Data</button>
+    </div> 
+
+
     <div id="wrapper">
-<div style="text-align:center">
-  <h1>
-    Breaking Bad Character Cards
-  </h1>
-  <button class="button primary" (click)="getData()">Fetch Data</button>
-    <div *ngFor="let person of data " style="text-align:center">
       <div id="main">
-      <div class="inner">
-        <section class="tiles">
-          <article class="style1">
-            <span class="image">
-              <img src={{person.img}}  width="326" height="353" alt="">
-            </span>
-            <a href="google.com">
-              <h2>{{person.name}}</h2>
-              <div class="content">
-                <p>
-                {{  person.birthday}}<br>
-                {{ person.nickname }}<br>
-                {{ person.occupation}}<br>
-                {{ person.status}}<br>
-                In Seasons : {{ person.appearance}}<br>
-                {{ person.portrayed}}<br>
-                {{ person.category}} <br>
-                {{ person.better_call_saul_apperance}}<br>
-                </p>
-              </div>
-            </a>
+        <section class="tiles" >
+          <div *ngFor="let person of data " style="text-align:center" class="inner">
+            <article class="style1">
+              <span class="image">
+                <img src={{person.img}}  width="326" height="353" alt="">
+              </span>
+              <a href="google.com">
+                <h2>{{person.name}}</h2>
+                <div class="content">
+                  <p>
+                    {{  person.birthday}}<br>
+                    {{ person.nickname }}<br>
+                    {{ person.occupation}}<br>
+                    {{ person.status}}<br>
+                    In Seasons : {{ person.appearance}}<br>
+                    {{ person.portrayed}}<br>
+                    {{ person.category}} <br>
+                    {{ person.better_call_saul_apperance}}<br>
+                  </p>
+                </div>
+              </a>
             </article>
+          </div>
         </section>
-       </div>
-       </div>
       </div>
- </div>
- </div>
+   </div>
   </body>
  <script src="assets/js/jquery.min.js"></script>
  <script src="assets/js/browser.min.js"></script>
